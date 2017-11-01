@@ -9,9 +9,9 @@ AutoPlay.delay=0;
 AutoPlay.night=false;
 
 AutoPlay.run = function () {
-  if (Game.AscendTimer>0 || Game.ReincarnateTimer>0) return;
-  if (AutoPlay.delay>0) { AutoPlay.delay--; return; }
-  if (AutoPlay.nightMode()) { var age=Date.now()-Game.lumpT; AutoPlay.cheatSugarLumps(age); return; }
+  //if (Game.AscendTimer>0 || Game.ReincarnateTimer>0) return;
+  //if (AutoPlay.delay>0) { AutoPlay.delay--; return; }
+  //if (AutoPlay.nightMode()) { var age=Date.now()-Game.lumpT; AutoPlay.cheatSugarLumps(age); return; }
   AutoPlay.handleClicking();
   AutoPlay.handleGoldenCookies();
   AutoPlay.handleBuildings();
@@ -81,7 +81,7 @@ AutoPlay.handleClicking = function() {
 
 //===================== Handle Upgrades ==========================
 AutoPlay.handleUpgrades = function() {
-  if (!Game.Achievements["Hardcore"].won && Game.UpgradesOwned==0) return;
+  //if (!Game.Achievements["Hardcore"].won && Game.UpgradesOwned==0) return;
   Game.UpgradesById.forEach(function(e) { if (e.unlocked && !e.bought && e.canBuy() && !AutoPlay.avoidbuy(e)) { e.buy(true); } });
 }
 
