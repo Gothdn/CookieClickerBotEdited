@@ -9,8 +9,8 @@ AutoPlay.delay=0;
 AutoPlay.night=false;
 
 AutoPlay.run = function () {
-  //if (Game.AscendTimer>0 || Game.ReincarnateTimer>0) return;
-  //if (AutoPlay.delay>0) { AutoPlay.delay--; return; }
+  if (Game.AscendTimer>0 || Game.ReincarnateTimer>0) return;
+  if (AutoPlay.delay>0) { AutoPlay.delay--; return; }
   //if (AutoPlay.nightMode()) { var age=Date.now()-Game.lumpT; AutoPlay.cheatSugarLumps(age); return; }
   AutoPlay.handleClicking();
   AutoPlay.handleGoldenCookies();
